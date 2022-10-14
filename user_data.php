@@ -1,2 +1,44 @@
 # Assignment
 Array Data Registration
+
+
+<?php
+
+$user_data = array(
+    array(
+        
+        'user_name' => 'Chidi Uwabunkeonye',
+        'user_email' => 'sollyokay@gmail.com',
+        'user_dob' => '07-07-1987',
+        'user_gender' => 'Male',
+        'user_country' => 'Nigeria'
+    ),
+);
+
+// Filter user Data
+function filteruserData(&$str) {
+    $str = preg_replace("/\t/", "\\t", $str);
+    $str = preg_replace("/\r?\n/", "\\n", $str);
+    if (strstr($str, '"'))
+        $str = '"' . str_replace('"', '""', $str) . '"';
+}
+
+// File Name & Content Header
+$file_name = "user_data.cvs";
+header("Content-Disposition: attachment; filename=\"$file_name\"");
+header("Content-Type: application/vnd.ms-excel");
+
+//To define column name in first row.
+$column_names = false;
+// run loop through each row in $customers_data
+foreach ($user_data as $row) {
+    if (!$column_names) {
+        echo implode("\t", array_keys($row)) . "\n";
+        $column_names = true;
+    }
+    // The array_walk() function runs each array element in a user-defined function.
+    array_walk($row, 'filteruserData');
+    echo implode("\t", array_values($row)) . "\n";
+}
+exit;
+?>
