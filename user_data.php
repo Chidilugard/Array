@@ -51,7 +51,7 @@ header("Content-Type: application/vnd.ms-excel");
 
 //To define column name in first row.
 $column_names = false;
-// run loop through each row in $customers_data
+// run loop through each row in $user_data
 foreach ($user_data as $row) {
     if (!$column_names) {
         echo implode("\t", array_keys($row)) . "\n";
