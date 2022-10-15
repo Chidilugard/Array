@@ -7,8 +7,8 @@ Array Data Registration
 $user_data = array(
     array(
         
-        'user_name' => 'Chidi Uwabunkeonye',
-        'user_email' => 'sollyokay@gmail.com',
+        'user_name' => 'Chidi Uwa',
+        'user_email' => 'okay@gmail.com',
         'user_dob' => '07-07-1987',
         'user_gender' => 'Male',
         'user_country' => 'Nigeria'
