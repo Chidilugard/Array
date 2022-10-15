@@ -12,6 +12,27 @@ $user_data = array(
         'user_dob' => '07-07-1987',
         'user_gender' => 'Male',
         'user_country' => 'Nigeria'
+        
+    ),
+    
+     array(
+        
+        'user_name' => 'Sola Bola',
+        'user_email' => 'solly@gmail.com',
+        'user_dob' => '07-08-1988',
+        'user_gender' => 'Female',
+        'user_country' => 'Gambia'
+        
+    ),
+    
+     array(
+        
+        'user_name' => 'Filo Ayu',
+        'user_email' => 'soy@gmail.com',
+        'user_dob' => '07-08-1958',
+        'user_gender' => 'Male',
+        'user_country' => 'Congo'
+        
     ),
 );
 
